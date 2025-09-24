@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML</title>
+    </head>
+    <body>
+        <h1><strong>HTML Basics - A Complete Guide</strong></h1>
+        <p>This website covers all the concepts that I've learnt about html</p>
+        <h4><strong>Contents:</strong></h4>
+        <ul>
+            <li><a href="Semantic Elements">Semantic Elements</a></li>
+            <li><a href="Text and Inline Elements">Text and Inline Elements</a></li>
+            <li><a href="List and Tables">List and Tables</a></li>
+            <li><a href="Forms and Inputs">Forms and Inputs</a></li>
+            <li><a href="Media">Media</a></li>
+            <li><a href="Self-closing Tag">Self-closing Tag</a></li>
+            <li><a href="Document Structure and Metadata">Document Structure and Metadata</a></li>
+            
+        </ul>
+        
+        <h2>Semantic Elements</h2>
+        <p>Use of semantic elements to describe the role of content</p>
+        <p><strong>Examples of Semantic elements</strong></p>
+        <ul>
+            <li>header</li>
+            <li>footer</li>
+            <li>article</li>
+
+        </ul>
+        <p><strong>Examples of non semantic elements</strong></p>
+        <ul>
+            <li>div</li>
+            <li>span</li>
+        </ul>
+        <p>Example usage:</p>
+        <ul>
+            <li>&lt;<strong>article</strong>&gt; - independent content (blog post, news item)</li>
+            <li>&lt;<strong>aside</strong>&gt; - defines content should be indirectly related to the surrounding content</li>
+            <li>&lt;<strong>section</strong>&gt; - defines a section in a document</li>
+            <li>&lt;<strong>header</strong>&gt; & &lt;<strong>footer</strong>&gt; - page or section headers/footers</li>
+
+        </ul>
+
+        <h2>Text and Inline Elements</h2>
+        <p>Block-level vs inline - block elements start on a new line (&lt;p&gt;,&lt;h1&gt;...); inline elements dont start on a new line , they stay in the flow (&lt;span&gt;,&lt;a&gt;).</p>
+        <h4>Paragraphs and text semantics</h4>
+        &lt;p&gt; for paragrahs. Text-level semantics include:
+        <ul>
+            <li>&lt;strong&gt; for important text (usually bold)</li>
+            <li>&lt;em&gt; for emphasis (usally italic word)</li>
+            <li>&lt;small&gt; for fine print</li>
+            <li>&lt;attr title='...'&gt; for abbreviations </li>
+            <li>&lt;mark&gt; to highlight text</li>
+            <li>&lt;code&gt;,&lt;pre&gt; for code;&lt;kbd&gt; for keyboard input</li>
+
+        </ul>
+
+        <h2>List and Tables</h2>
+        <h4><strong>Lists</strong></h4>
+        <p>Ordered list (&lt;ol&gt;), unordered list (&lt;ul&gt;), and definition list (&lt;dl&gt;)</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+
+        <h4><strong>Tables</strong></h4>
+        <p>Use tables for tabular data, not layout. Important tags: &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;.</p>
+        
+        <tableborder="1" cellpadding=5px; cellspacing=0px;>
+            <caption>Sample table</caption>
+            <thead>
+                <tr>
+                    <th><strong>Language</strong></th>
+                    <th><strong>Type</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Markup</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Scripting</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Forms and Inputs </h2>
+        <p>Forms collect user input. Use proper labels and fieldset/legend for grouping</p>
+        <form>
+            <fieldset>
+                <legend>Contact form</legend>
+                <br>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="Name">
+
+                </div>
+                <br>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email">
+                </div>
+                <br>
+                
+                <div>
+                    <label>Age:</label>
+                    <input type="number" name="age">
+
+                </div>
+                <br>
+
+                <div>
+                    <lable>Birthday:</lable>
+                    <input type="date" name="Birthday">
+                </div>
+                <br>
+
+                <div>
+                    <lable>Favorite color:</lable>
+                    <input type="color" name="Favorite color">
+                </div>
+                <br>
+
+                <div>
+                    <label>Website:</label>
+                    <input type="url" name="Website">
+
+                </div>
+                <br>
+
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password">
+                </div>
+                <br>
+
+                <div>
+                    <label>Short Bio</label>
+                    <textarea name="text" name="Short Bio"></textarea>
+                </div>
+                <br>
+
+                <div>
+                    <label>Gender:</label><br>
+                    <input type="radio" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    
+                    <input type="radio" name="gender" value="female">
+                    <label for="female">female</label><br>
+
+                </div>
+                <br>
+
+                <div>
+                    <label>Hobbies:</label>
+                    <select name="Hobbies">
+                        <option value="Reading">Reading</option>
+                        <option value="Sports">Sprots</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label>Upload file:</label>
+                    <input type="file" name="file">
+                </div>
+                <br>
+
+                <input type="Submit" name="Submit" value="Submit">
+
+                
+                
+            </fieldset>
+        </form>
+
+        <h2>Media</h2>
+        <p><strong>Images</strong></p>
+        <p>Use &lt;img src="..." alt="....."&gt;. Always provide alt text for accessibilty.</p>
+        <p>Responsive images: &lt;picture&gt;&lt;source&gt;&lt;img&gt;&lt;/picture&gt;</p>
+        <p>Figure: placeholder image with &lt;figure&gt; and &lt;figcaption&gt;.</p>
+
+        <img src="full_creative_logo.jpeg">
+
+        <h2>Audio</h2>
+        <p>Click on the play button to play a sound:</p>
+        <audio controls>
+        <source src="countdown-from-10-190389.mp3">
+        </audio>
+
+        <h2>Video</h2>
+        <p>Click on the play button to see the video:</p>
+        <video controls>
+            <source src="istockphoto-2147709540-640_adpp_is.mp4">
+        </video>
+
+        <h2>Self-closing Tag</h2>
+        <p>It is written in a single line</p>
+        <p>Example:</p>
+        <ul>
+            <li>&lt;img&gt;</li>
+            <li>&lt;br&gt;</li>
+            <li>&lt;hr&gt;</li>
+            <li>&lt;input&gt;</li>
+            <li>&lt;meta&gt;</li>
+            <li>&lt;link&gt;</li>
+        </ul>
+
+        <h2>Document Structure and Metadata</h2>
+        <p>Important &lt;head&gt; elements (some already used at top):</p>
+        <ul>
+            <li>&lt;meta charset="utf-8"&gt;</li>
+            <li>&lt;meta name="viewport" content="width=device-width,inital-scale=1"&gt;</li>
+            <li>&lt;title&gt; -- required for pages</li>
+            
+        </ul>
+
+        <h2>Comments</h2>
+        <p>HTML comments: &lt;!-- comment --&gt;</p>
+
+        <h2>Character entities</h2>
+        <p>Use HTML entities for special characters: &lt; &gt;, &amp;, &copy;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+
+
+        
+
+
+    </body>
+</html>
